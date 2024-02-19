@@ -1,10 +1,6 @@
 const { Worker } = require("worker_threads");
 
 function runService(workerData, choice) {
-  if (choice !== "1" || choice !== "2") {
-    console.log("Not a choice! Exiting...");
-    process.exit(1);
-  }
   return new Promise((resolve, reject) => {
     const workers = [];
     workerData.forEach((file) => {
